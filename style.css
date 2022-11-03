@@ -981,3 +981,12 @@ footer p{
   margin-top: 0;
   padding-top: 70px;
 }
+
+
+/**************************************** Media Querry ***********************************************/
+
+@media (min-width:1270px) {
+  .checkout {
+    margin-right:300px;
+}
+}
