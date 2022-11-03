@@ -985,7 +985,7 @@ footer p{
 
 /**************************************** Media Querry ***********************************************/
 
-@media (min-width:1270px) {
+@media (min-width:1285px) {
   .checkout {
     margin-right:300px;
 }
