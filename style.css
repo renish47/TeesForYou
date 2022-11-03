@@ -687,8 +687,8 @@ footer p{
 } 
 
 .wishlist:hover{
-  background-color: #030303;
-  color: #f96366;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
 }
 
 .proDetail h4{
@@ -981,6 +981,7 @@ footer p{
   margin-top: 0;
   padding-top: 70px;
 }
+
 
 
 /**************************************** Media Querry ***********************************************/
