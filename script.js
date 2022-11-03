@@ -1216,11 +1216,11 @@ function createProduct(product,container){
     newProduct.setAttribute('onclick',"openSpPage(event)");
     newProduct.innerHTML = `
     <span id='n/b${product.id}'></span>
-    <img src="${product.location}" alt="" id="${product.id}-2">
-    <div class="description col align-items-start pt-3" id="${product.id}-3">
-        <p id="${product.id}-1">${product.type}</p>
-        <h5 id="${product.id}-2">${product.Name +'  ' +product.type}</h5>
-        <b>Rs.<span class="oldPrice" id="${product.id}-4">${product.oldPrice}</span> </b><span class="newPrice" id="${product.id}-5">${product.newPrice}</span>
+    <img src="${product.location}" alt="" id="1${product.id}-2">
+    <div class="description col align-items-start pt-3" id="1${product.id}-3">
+        <p id="1${product.id}-1">${product.type}</p>
+        <h5 id="1${product.id}-2">${product.Name +'  ' +product.type}</h5>
+        <b>Rs.<span class="oldPrice" id="1${product.id}-4">${product.oldPrice}</span> </b><span class="newPrice" id="1${product.id}-5">${product.newPrice}</span>
         <i class="fa-solid fa-cart-shopping cartBtn" id="cartBtn+${product.id}" onclick="openSizeCard(event)"></i>
     </div>
     <div id="SizeCard+${product.id}" class="sizeCard">
@@ -1272,11 +1272,11 @@ function openSizeCard(event) {
   
 // Opening Single product page
  function openSpPage(event){
-    // console.log(event.target.id.slice(0,event.target.id.indexOf('-')))
+    console.log(event.target.id[0],event.target.parentElement.id[0])
     if(event.target.id[0]!='c'&& event.target.id[0]!='z' && event.target.parentElement.id[0]!='+'){
          let changingPart = document.getElementById('changingPart');
          for(let product of allProducts){
-             if(event.target.parentElement.id==product.id ||event.target.id.slice(0,event.target.id.indexOf('-'))==product.id ){
+             if(event.target.parentElement.id==product.id ||event.target.id.slice(1,event.target.id.indexOf('-'))==product.id ){
                  window.scrollTo(0, 0)
                  changingPart.innerHTML=''
                  changingPart.innerHTML = `
