@@ -1312,7 +1312,7 @@ function openSizeCard(event) {
                          <label for="number">Quantity</label>
                          <input type="number" value="1" name="Quantity" id="quantityField"><br>
                          <button class="addToCart" onclick="addToCart2(event)">Add to cart</button>
-                         <button class="wishlist"><i class="fa-solid fa-heart"></i></button>
+                         <button class="wishlist" onclick="wishlisted()"  id="heartu"><i class="fa-solid fa-heart" ></i></button>
                                  <div class="proDetail">
                                      <h4>Product Information</h4>
                                      <p><span>Colour:</span> ${product.color} <br>
@@ -1439,3 +1439,8 @@ function welcome(){
     
 }
 
+function wishlisted(){
+    console.log('hi')
+    document.getElementById('heartu').style.color ="red";
+    document.getElementById('heartu').style.backgroundColor ="#f9f9f9";
+}
