@@ -31,7 +31,9 @@ header{
   left: 0;
   z-index: 999;
 }
-
+.forMobile{
+  display: none;
+}
 header a img{
   width: 90px;
   padding-left: 10px;
@@ -62,12 +64,16 @@ header .navi li a{
   padding-left: 8px;
 }
 
-header .navi li a:hover{
+.navi li a:hover{
   /* color: rgb(222, 86, 86) !important; */
   color: #fdfdfd !important;
   text-shadow: 2px 2px 2px black;
   font-size: 19px !important;
 }
+#close{
+  display: none;
+}
+
 .activePg{
   color: #fdfdfd !important;
   text-shadow: 2px 2px 2px black !important;
@@ -991,5 +997,177 @@ footer p{
 @media (min-width:1285px) {
   .checkout {
     margin-right:300px;
+}
+}
+
+/* home page */
+@media (max-width:880px){
+  .bannerTxt h2{
+    font-size: 60px;
+  }
+  .bannerTxt h3{
+    font-size: 30px;
+  }
+  .bannerGif{
+    height: 85%;
+  }
+  .bannerGif:hover{
+    height: 90%;
+  }
+  .banner button {
+    font-size: 17px;
+}
+}
+
+@media (max-width:790px){
+  header .navi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position:fixed;
+    top: 0px;
+    right: -500px;
+    height: 120vh;
+    width: 300px;
+    background-color: #bef0ea;
+    box-shadow: 0 40px 60px rgba(0, 0, 0,0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.4s ease;
+}
+
+  .navi.active{
+    right: 0px;
+  }
+  .navi li{
+    margin-bottom: 25px;
+    font-size: 30px ;
+  }
+  .navi .cartBtn{
+    display: none;
+  }
+
+  .forMobile{
+    display: flex;
+  }
+
+  .forMobile i{
+    color: #000000;
+    font-size: 22px;
+    padding: 0 30px;
+    transition: 0.2s ease;
+
+  }
+  .forMobile i:hover{
+    color: #ffb055;
+  }
+  #close{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #000000;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  #close:hover{
+    color: #fdb500;
+  }
+
+  .bannerGif{
+    height: 70%;
+  }
+  .bannerGif:hover{
+    height: 70%;
+
+  }
+  
+  .banner{
+    flex-direction: column;
+    height: 850px;
+    text-align: center;
+  }
+  .bannerTxt{
+    margin-top: 40px;
+    padding-left: 0;
+  }
+  .bannerTxt h2{
+    font-size: 60px;
+
+  }
+  .bannerTxt p{
+    font-size: 14px;
+    margin-left: 60px;
+  }
+}
+
+@media (max-width:700px){
+
+  .productContainer{
+    margin: 10px 20px;
+  }
+}
+@media (max-width:630px){
+  .newProduct{
+    min-width: 240px;
+    margin: 8px;
+  }
+  .productContainer{
+    margin: 10px 20px;
+  }
+  .description i{
+    left: 180px;
+  }
+}
+@media (max-width:550px){
+  .bannerTxt p{
+    bottom: 0px;
+    margin-left: 0;
+  }
+  .banner{
+    height:600px ;
+  }
+  .bannerGif{
+    height: 60%;
+  }
+  .bannerGif:hover{
+    height: 60%;
+
+  }
+  .bannerTxt h2{
+    font-size: 40px;
+  }
+  .bannerTxt h3{
+    font-size: 20px;
+  }
+  .bannerTxt p{
+    font-size: 10px;
+  }
+  .banner{
+    justify-content: flex-start;
+  }
+  .collection h2{
+    font-size: 50px;
+  }
+  .webSlider {
+    padding: 0;
+  }
+  .socialMedia i{
+    font-size: 30px;
+  }
+  .footer-container{
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+  .socialMedia h2{
+    font-size: 20px;
+  }
+  .newProduct{
+    min-width: 260px;
+    margin: 8px;
+  }
+  .description i {
+    left: 200px;
 }
 }
