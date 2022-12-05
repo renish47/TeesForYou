@@ -1984,8 +1984,6 @@ function passwordStrength(event) {
 
 function showHidePassword(event) {
     let showHideBtn = document.getElementById(event.target.id);
-    console.log(showHideBtn.classList)
-    console.log(showHideBtn.classList[0])
     if (showHideBtn.classList[3] == 'fa-eye-slash') {
         showHideBtn.classList.remove('fa-eye-slash');
         showHideBtn.classList.add('fa-eye');
