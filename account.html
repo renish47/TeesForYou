@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+  <title>TFY - Account</title>
+  <link rel="icon" href="img/tfy.ico" />
+  <link rel="icon" href="img/tfy.ico" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/94c64997a1.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="loadAccountPage(event)">
+
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-centered w-25">
+      <div class="modal-content">
+  
+        <div class="modal-body text-center msgSent" id="signinModal">
+          <!-- <button type="button" class="btn-close justify-content-start pr-0" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <br><i class="fa-solid fa-circle-check"></i> <span>Account Verified</span><br>
+          <p class="shortMsg">Welcome Buddy:)</p><br>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <header>
+    <a href="./index.html"><img src="./img/Logo.png" alt=""></a>
+    <div class="navi" id="nav">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./shop.html">Shop</a></li>
+      <li><a href="#" onclick="accountPage(event)" class="activePg">Account</a></li>
+      <li><a href="./contact.html">Contact</a></li>
+      <li><a href="./cart.html" class="cartBtn"><i class="fa-solid fa-cart-shopping cart"><span id="cartNofitication2"></span></i></a></li>
+      <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <div class="forMobile">
+      <a href="./cart.html"><i class="fa-solid fa-cart-shopping"><span id="cartNofitication"></span></i></a>
+      <i class="fa-solid fa-bars" id="bar"></i>
+    </div>
+  </header>
+
+
+    <section class="products accountSettings" id="accountPgContainer">
+      <!-- <div class="profilePhoto">RE</div> -->
+    </section>
+
+
+  <br><br>
+  <section class="socialMedia">
+    <h2>Follow us on</h2>
+    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h4>Need Help?</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Track my Order</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Bulk Order</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More Info</h4>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p>&#169; Copyright TeesForYou 2022</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>
