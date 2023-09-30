@@ -6,7 +6,7 @@
 ## Introduction
 
 
-TeesForYou is a modern E-Commerce website designed for buying a variety of clothing items, including T-Shirts, hoodies, sweatshirts, crop tops, and more. This project is the result of the hard work of our development team, and it is the perfect choice for those who love stylish clothing. This repository contains the client-side code for the TeesForYou website.
+TeesForYou is a modern E-Commerce website designed for buying a variety of clothing items, including T-Shirts, hoodies, sweatshirts, crop tops, and more. This repository contains the client-side code for the TeesForYou website.
 
 Please note that this project does not include a backend server or database. Instead, we have used a mock API website as our backend server to simulate the required functionality. The project is entirely built using vanilla HTML, CSS, and JavaScript, with plans to make it responsive in the future.
 
