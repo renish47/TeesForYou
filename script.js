@@ -2610,37 +2610,51 @@ async function cartNotification() {
 cartNotification();
 
 
-
-
 async function updateRedirectionStatus(status) {
-    try{
+    try {
         sessionDetails.isRedirected = status;
-        await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
-            method: "PUT",
-            headers: { "content-Type": "application/json" },
-            body: JSON.stringify(sessionDetails)
-        })
-    }catch(err){console.log(err)}
+        // await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
+        //     method: "PUT", 
+        //     headers: { "content-Type": "application/json" },
+        //     body: JSON.stringify(sessionDetails)
+        // })
+        localStorage.setItem('sessionDetails', JSON.stringify(sessionDetails));
+    } catch (err) { console.log(err) }
 }
+
 async function updateUserSignedInStatus(status) {
-    try{
+    try {
         sessionDetails.isUserSignedIn = status;
-    await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
-        method: "PUT",
-        headers: { "content-Type": "application/json" },
-        body: JSON.stringify(sessionDetails)
-    })
-    }catch(err){console.log(err)}
+        // await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
+        //     method: "PUT",
+        //     headers: { "content-Type": "application/json" },
+        //     body: JSON.stringify(sessionDetails)
+        // })
+        localStorage.setItem('sessionDetails', JSON.stringify(sessionDetails));
+    } catch (err) { console.log(err) }
 }
+
 async function updateSignedUserDetail(details) {
-    try{
+    try {
         sessionDetails.userDetail = details;
-    await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
-        method: "PUT",
-        headers: { "content-Type": "application/json" },
-        body: JSON.stringify(sessionDetails)
-    })
-    }catch(err){console.log(err)}
+        // await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails/1", {
+        //     method: "PUT",
+        //     headers: { "content-Type": "application/json" },
+        //     body: JSON.stringify(sessionDetails)
+        // })
+        localStorage.setItem('sessionDetails', JSON.stringify(sessionDetails));
+    } catch (err) { console.log(err) }
+}
+
+async function getSessionDetails() {
+    try {
+        // let data = await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails")
+        // let res = await data.json()
+        // sessionDetails = res[0]
+        sessionDetails = JSON.parse(localStorage.getItem('sessionDetails')) || {};
+        return sessionDetails;
+    }
+    catch (err) { console.log(err) }
 }
 
 async function deleteUserFromDB(){
@@ -2660,17 +2674,6 @@ async function updateUserDb(details) {
         body: JSON.stringify(details)
     })
     }catch(err){console.log(err)}
-}
-async function getSessionDetails() {
-   try{
-    let data = await fetch("https://63676bfdf5f549f052d5229f.mockapi.io/SessionDetails")
-    let res = await data.json()
-    sessionDetails = res[0]
-    // await updateUserDbb()
-    // console.log(sessionDetails)
-    return res[0]
-   }
-   catch(err){console.log(err)}
 }
 
 async function getUserDb() {
